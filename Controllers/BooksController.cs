@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Pop_Simona_Lab2M.Data;
-using Pop_Simona_Lab2M.Models;
+using LibraryModel.Data;
+using LibraryModel.Models;
 
 namespace Pop_Simona_Lab2M.Controllers
 {

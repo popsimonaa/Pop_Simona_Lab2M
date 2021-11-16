@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Pop_Simona_Lab2M.Data;
+using LibraryModel.Data;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Pop_Simona_Lab2M

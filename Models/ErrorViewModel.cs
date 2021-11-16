@@ -1,6 +1,6 @@
 using System;
 
-namespace Pop_Simona_Lab2M.Models
+namespace LibraryModel.Models
 {
     public class ErrorViewModel
     {
