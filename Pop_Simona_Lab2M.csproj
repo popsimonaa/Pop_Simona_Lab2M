@@ -17,4 +17,8 @@
     <ProjectReference Include="..\LibraryModel\LibraryModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\microsoft\" />
+  </ItemGroup>
+
 </Project>
