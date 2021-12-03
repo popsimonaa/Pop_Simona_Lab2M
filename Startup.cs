@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using LibraryModel.Data;
 using Microsoft.EntityFrameworkCore;
 using Pop_Simona_Lab2M.Hubs;
+using Microsoft.AspNetCore.Identity;
 
 namespace Pop_Simona_Lab2M
 {
@@ -29,6 +30,20 @@ namespace Pop_Simona_Lab2M
             services.AddControllersWithViews();
             services.AddDbContext<LibraryContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSignalR();
+            services.Configure<IdentityOptions>(options => {
+                // Default Lockout settings.
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 3; 
+                //options.Lockout.AllowedForNewUsers = true;
+                options.Password.RequiredLength = 8;
+            });
+            //services.Configure<IdentityOptions>(options => { // Default Password
+            //    options.Password.RequireDigit = true;
+            //    options.Password.RequireLowercase = true;
+            //    options.Password.RequireNonAlphanumeric = true;
+            //    options.Password.RequireUppercase = true;
+            //    options.Password.RequiredLength = 8;
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +63,7 @@ namespace Pop_Simona_Lab2M
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -57,6 +73,7 @@ namespace Pop_Simona_Lab2M
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapHub<ChatHub>("/chathub");
+                endpoints.MapRazorPages();
             });
         }
     }
