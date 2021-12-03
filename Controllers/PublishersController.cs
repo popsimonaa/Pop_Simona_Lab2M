@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using LibraryModel.Data;
 using LibraryModel.Models;
 using LibraryModel.Models.LibraryViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Pop_Simona_Lab2M.Controllers
 {
+    [Authorize(Policy = "OnlySales")]
     public class PublishersController : Controller
     {
         private readonly LibraryContext _context;
