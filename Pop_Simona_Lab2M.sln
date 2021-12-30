@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pop_Simona_Lab2M", "Pop_Simona_Lab2M.csproj", "{C1A31031-9460-4D45-901D-CC6656819D6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryModel", "..\LibraryModel\LibraryModel.csproj", "{BB806AB3-0422-4DBA-B4AC-2B6CCAC4ECA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryModel", "..\LibraryModel\LibraryModel.csproj", "{BB806AB3-0422-4DBA-B4AC-2B6CCAC4ECA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWebAPI", "..\LibraryWebAPI\LibraryWebAPI.csproj", "{1F9BBC8B-F2BC-4D3D-8179-C9218B9D176F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryWebAPI", "..\LibraryWebAPI\LibraryWebAPI.csproj", "{1F9BBC8B-F2BC-4D3D-8179-C9218B9D176F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcCustomersService", "..\GrpcCustomersService\GrpcCustomersService.csproj", "{E56C6647-175E-4E3A-8367-5CB1E170315B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{1F9BBC8B-F2BC-4D3D-8179-C9218B9D176F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F9BBC8B-F2BC-4D3D-8179-C9218B9D176F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F9BBC8B-F2BC-4D3D-8179-C9218B9D176F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E56C6647-175E-4E3A-8367-5CB1E170315B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56C6647-175E-4E3A-8367-5CB1E170315B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56C6647-175E-4E3A-8367-5CB1E170315B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56C6647-175E-4E3A-8367-5CB1E170315B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

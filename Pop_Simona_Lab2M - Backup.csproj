@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GrpcCustomersService\GrpcCustomersService.csproj" />
     <ProjectReference Include="..\LibraryModel\LibraryModel.csproj" />
   </ItemGroup>
 
@@ -32,8 +33,9 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <Protobuf Include="Protos\customerCRUD.proto" GrpcServices="Client" />
-    <!--<None Update="Protos\customerCRUD.proto" GrpcServices="Client"> <GrpcServices>Server</GrpcServices>-->
+	  <Protobuf Include="Protos\customersCRUD.proto" GrpcServices="Client" />
+    <!--<None Update="Protos\customerCRUD.proto" GrpcServices="Client">
+     <GrpcServices>Server</GrpcServices>-->
   </ItemGroup>
 
 </Project>

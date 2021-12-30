@@ -196,8 +196,7 @@ namespace Pop_Simona_Lab2M.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind("CustomerID,Name,Adress,BirthDate")]
-Customer customer)
+        public async Task<ActionResult> Create([Bind("CustomerID,Name,Adress,BirthDate")] Customer customer)
         {
             if (!ModelState.IsValid) return View(customer);
             try
@@ -276,8 +275,7 @@ Customer customer)
             {
                 var client = new HttpClient();
                 HttpRequestMessage request =
-                new HttpRequestMessage(HttpMethod.Delete,
-               $"{_baseUrl}/{customer.CustomerID}")
+                new HttpRequestMessage(HttpMethod.Delete, $"{_baseUrl}/{customer.CustomerID}")
                 {
                     Content = new StringContent(JsonConvert.SerializeObject(customer),
                Encoding.UTF8, "application/json")
